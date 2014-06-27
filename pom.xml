@@ -75,29 +75,7 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+            
         </plugins>
     </build>
-    <scm>
-        <developerConnection>scm:svn:https://xjsf.googlecode.com/svn/trunk</developerConnection>
-        <connection>scm:svn:http://xjsf.googlecode.com/svn/trunk</connection>
-        <url>http://xjsf.googlecode.com/svn/trunk</url>
-    </scm>
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
 </project>
