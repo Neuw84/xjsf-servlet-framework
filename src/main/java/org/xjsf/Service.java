@@ -81,6 +81,7 @@ public abstract class Service extends HttpServlet {
         this.supportsDirectResponse = supportsDirectResponse;
     }
 
+    @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
 
@@ -113,10 +114,12 @@ public abstract class Service extends HttpServlet {
         return hub;
     }
 
+    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         doGet(request, response);
     }
 
+    @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
         ResponseFormat responseFormat = prmResponseFormat.getValue(request);
